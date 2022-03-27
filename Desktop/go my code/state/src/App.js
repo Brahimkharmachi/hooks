@@ -1,27 +1,44 @@
-import React, { Component } from "react";
-import ClassComponent from "./component/ClassComponent";
-import FnComponent from "./component/FunctionalComponent";
+import React, { Component } from 'react'
+import photoss from './component/picture'; 
 
-export default class extends Component {
-  state = {
-    show: false,
-  };
+class App extends Component {
+  
 
-  toggel = () => {
-    this.setState({ show: !this.state.show });
-  };
-
+  
+  
+  constructor(props) {
+    super(props);
+    this.state = {
+      fullname: "Brahim Kharmachi",
+      bio: "I say  ",
+      img:<photo/>,
+      profession: "developper " }
+    
+  }
+  state={
+    divcontainer:false}
   render() {
+    var Handlechange = e => {
+      this.setState({divcontainer:!this.state.divcontainer})
+    }
+    const x=this.state.divcontainer;
+
     return (
-      <div>
-        <button onClick={this.toggel}>
-          {this.state.show ? "Hide" : "Show"}
-        </button>
-
-        {this.state.show ? <ClassComponent /> : null}
-
-        <FnComponent />
+      <div> 
+        <button onClick={Handlechange}>{x?'Hide':'Show'}</button>
+          {x &&(<div>
+              
+          <center>
+          
+          <h1 >My name is {this.state.fullname}</h1>
+          <p>something i want to say {this.state.bio}</p>
+          <p>I want to be {this.state.profession}</p>
+          <p>here is a picture . {this.state.img}</p>
+           </center>
+      </div>)}
       </div>
-    );
+    )
   }
 }
+
+export default App;
