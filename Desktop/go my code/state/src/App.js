@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
-import photoss from './component/picture'; 
+import Pic from './component/picture';
+
+
 
 class App extends Component {
   
@@ -11,13 +13,15 @@ class App extends Component {
     this.state = {
       fullname: "Brahim Kharmachi",
       bio: "I say  ",
-      img:<photo/>,
+      img: <Pic/> ,
       profession: "developper " }
     
   }
-  state={
-    divcontainer:false}
+  state={divcontainer:false}
   render() {
+    const {count}=this.state
+
+
     var Handlechange = e => {
       this.setState({divcontainer:!this.state.divcontainer})
     }
@@ -34,11 +38,11 @@ class App extends Component {
           <p>something i want to say {this.state.bio}</p>
           <p>I want to be {this.state.profession}</p>
           <p>here is a picture . {this.state.img}</p>
+          <h2>{count}</h2>
            </center>
       </div>)}
       </div>
     )
   }
-}
-
+}  
 export default App;

@@ -1,13 +1,12 @@
 import React from "react"
+import Image from './photoss.jpg'
 
-import picture from 'photoss.jpg'
-
-function photoss() {
+function Pic() {
     return (
         <div> 
         
-        <img src={picture}/>
+        <img src={Image}/>
         </div>
     )}
 
-export default photoss
+export default Pic 
