@@ -5,7 +5,7 @@ function Pic() {
     return (
         <div> 
         
-        <img src={Image}/>
+        <img  src={Image}  />
         </div>
     )}
 

@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Pic from './component/picture';
+import './App.css'
 
 
 
@@ -34,7 +35,7 @@ class App extends Component {
               
           <center>
           
-          <h1 >My name is {this.state.fullname}</h1>
+          <h1 className='my'>My name is {this.state.fullname}</h1>
           <p>something i want to say {this.state.bio}</p>
           <p>I want to be {this.state.profession}</p>
           <p>here is a picture . {this.state.img}</p>
