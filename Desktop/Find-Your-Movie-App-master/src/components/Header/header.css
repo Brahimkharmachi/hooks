@@ -1,0 +1,17 @@
+.header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 50px 0;
+  background:linear-gradient(to right bottom,white 0%, yellow 100%) !important; 
+  color:black !important;
+}
+h1 {
+  font-family:'Times New Roman', Times, serif !important ;
+}
+
+.filter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
